@@ -22,7 +22,7 @@ import android.widget.Button;
 
 public class MainWeight extends AppCompatActivity {
     private Button buttonWeightCheckOK;
-    private MainActivity mainActivity;
+    MainActivity mainActivity = new MainActivity();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ public class MainWeight extends AppCompatActivity {
             public void onClick(View v) {
                 //Tworzymy notyfikację
                 Context context = MainWeight.this;
-                mainActivity.createNotification(DELAY_TIME_FOR_NOTIFICATION_8H,"NotificationMainWeight","channelWeight",201,context);
+                mainActivity.createNotification(DELAY_TIME_FOR_NOTIFICATION_24H,"Please check your weight","channelWeight",201,context);
                 // Przekierowanie na kolejny widok
                 Intent intent = new Intent(MainWeight.this, MainMenu.class);
                 startActivity(intent);

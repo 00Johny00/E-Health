@@ -10,6 +10,7 @@ import androidx.core.app.NotificationManagerCompat;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -20,7 +21,7 @@ import android.widget.Button;
 
 public class MainBloodPressure extends AppCompatActivity {
     private Button buttonBlookPressureCheck;
-    private MainActivity mainActivity;
+    private MainActivity mainActivity = new MainActivity();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,9 +31,11 @@ public class MainBloodPressure extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Tworzymy notyfikację
-//               showNotification();
+                Context context = MainBloodPressure.this;
+                mainActivity.createNotification(DELAY_TIME_FOR_NOTIFICATION_8H,"Please check your pulse and blood pressure","channelBloodPressure",202,context);
+
                 // Przekierowanie na kolejny widok
-                Intent intent = new Intent(MainBloodPressure.this, MainMenu.class);
+                Intent intent = new Intent(context, MainMenu.class);
                 startActivity(intent);
             }
         });

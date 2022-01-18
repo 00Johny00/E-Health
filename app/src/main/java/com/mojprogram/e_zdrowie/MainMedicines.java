@@ -5,6 +5,7 @@ import static com.mojprogram.e_zdrowie.MainActivity.DELAY_TIME_FOR_NOTIFICATION_
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +14,7 @@ import android.widget.Button;
 public class MainMedicines extends AppCompatActivity {
     private Button buttonMedicinesCheckYes;
     private Button buttonMedicinesCheckNo;
-    private MainActivity mainActivity;
+    private MainActivity mainActivity = new MainActivity();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +27,10 @@ public class MainMedicines extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Tworzymy notyfikację
-//                mainActivity.showNotification(DELAY_TIME_FOR_NOTIFICATION_8H);
+                Context context = MainMedicines.this;
+                mainActivity.createNotification(DELAY_TIME_FOR_NOTIFICATION_8H,"Please check your medicine","channelMedicine",204,context);
                 // Przekierowanie na kolejny widok
-                Intent intent = new Intent(MainMedicines.this, MainMenu.class);
+                Intent intent = new Intent(context, MainMenu.class);
                 startActivity(intent);
             }
         });
@@ -37,9 +39,11 @@ public class MainMedicines extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Tworzymy notyfikację
-//                showNotification();
+                Context context = MainMedicines.this;
+                mainActivity.createNotification(DELAY_TIME_FOR_NOTIFICATION_8H,"Please check your medicine","channelMedicine",204,context);
+
                 // Przekierowanie na kolejny widok
-                Intent intent = new Intent(MainMedicines.this, MainMenu.class);
+                Intent intent = new Intent(context, MainMenu.class);
                 startActivity(intent);
             }
         });

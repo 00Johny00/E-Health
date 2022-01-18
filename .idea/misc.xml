@@ -16,8 +16,9 @@
         <entry key="..\:/ProjektyJavahorakIT/EZdrowie/app/src/main/res/layout/activity_main_medicines.xml" value="0.41510416666666666" />
         <entry key="..\:/ProjektyJavahorakIT/EZdrowie/app/src/main/res/layout/activity_main_menu.xml" value="0.22" />
         <entry key="..\:/ProjektyJavahorakIT/EZdrowie/app/src/main/res/layout/activity_main_menu2.xml" value="0.24739583333333334" />
-        <entry key="..\:/ProjektyJavahorakIT/EZdrowie/app/src/main/res/layout/activity_main_summary.xml" value="0.25" />
+        <entry key="..\:/ProjektyJavahorakIT/EZdrowie/app/src/main/res/layout/activity_main_summary.xml" value="0.22" />
         <entry key="..\:/ProjektyJavahorakIT/EZdrowie/app/src/main/res/layout/activity_main_weight.xml" value="0.42916666666666664" />
+        <entry key="..\:/ProjektyJavahorakIT/EZdrowie/app/src/main/res/layout/activity_my_row.xml" value="0.25" />
         <entry key="..\:/ProjektyJavahorakIT/EZdrowie/app/src/main/res/layout/app_bar_main_menu.xml" value="0.1" />
         <entry key="..\:/ProjektyJavahorakIT/EZdrowie/app/src/main/res/layout/content_main_menu.xml" value="0.24739583333333334" />
         <entry key="..\:/ProjektyJavahorakIT/EZdrowie/app/src/main/res/layout/fragment_dashboard.xml" value="0.24739583333333334" />
@@ -32,6 +33,7 @@
         <entry key="..\:/ProjektyJavahorakIT/EZdrowie/app/src/main/res/layout/fragment_view_summary_of_results.xml" value="0.2484375" />
         <entry key="..\:/ProjektyJavahorakIT/EZdrowie/app/src/main/res/layout/fragment_weight_check.xml" value="0.25" />
         <entry key="..\:/ProjektyJavahorakIT/EZdrowie/app/src/main/res/layout/fragment_weight_notification.xml" value="0.2484375" />
+        <entry key="..\:/ProjektyJavahorakIT/EZdrowie/app/src/main/res/layout/my_row.xml" value="0.24208860759493672" />
         <entry key="..\:/ProjektyJavahorakIT/EZdrowie/app/src/main/res/layout/nav_header_main_menu.xml" value="0.1" />
         <entry key="..\:/ProjektyJavahorakIT/EZdrowie/app/src/main/res/menu/activity_main_drawer.xml" value="0.1" />
         <entry key="..\:/ProjektyJavahorakIT/EZdrowie/app/src/main/res/menu/bottom_nav_menu.xml" value="0.24739583333333334" />

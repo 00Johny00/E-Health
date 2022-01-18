@@ -5,43 +5,48 @@ import static com.mojprogram.e_zdrowie.R.*;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private static final String CHANNEL_ID = "E-Health Notification" ;
-    public static final long DELAY_TIME_FOR_NOTIFICATION_8H = 1000;//  8 * 60 * 60 *1000; //10 sec
-    public static final long DELAY_TIME_FOR_NOTIFICATION_24H = 24 * 60 * 60 *1000; //10 sec
-
+    public static final long DELAY_TIME_FOR_NOTIFICATION_8H = 2000;//  8 * 60 * 60 *1000; //- 8h, 2  sec for example recoding purpose
+    public static final long DELAY_TIME_FOR_NOTIFICATION_24H = 4000; // 24 * 60 * 60 *1000; //- 24h, 4  sec for example recoding purpose
 
     private Button okButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(layout.activity_main);
         okButton = (Button) findViewById(id.okButton);
-
         startNewActivityWithOkButton();
 
     }
+
 
     private void startNewActivityWithOkButton() {
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Context context = MainActivity.this;
-                createNotification(DELAY_TIME_FOR_NOTIFICATION_8H,"NotificationMainActivity","channelActivity",200,context);
-//                                 Przekierowanie na kolejny widok
+
+//        Przekierowanie na kolejny widok
                 Intent intent = new Intent(MainActivity.this, MainMenu.class);
                 startActivity(intent);
             }
@@ -95,5 +100,4 @@ public class MainActivity extends AppCompatActivity {
             channel.setDescription(description);
         }
     }
-
 }
